@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OfficeBox</title>
+  <meta name="telegram:bot" content="Telegram bot integration">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+  <title>OfficeBox</title>
 </head>
 <body>
-  <div class="welcome-screen">
-    <h1>Добро пожаловать в OfficeBox</h1>
-    <p>Ваш личный ассистент по задачам и команде.</p>
-    <button onclick="showTaskBoard()">Перейти к задачам</button>
-  </div>
+  <div class="container">
+    <h1>OfficeBox</h1>
+    <p>Ваш личный ассистент по задачам и команде</p>
 
-  <div class="task-board" style="display: none;">
-    <h2>Мои задачи</h2>
+    <div class="task-input">
+      <input type="text" id="taskText" placeholder="Введите задачу...">
+      <button onclick="addTask()">Добавить</button>
+    </div>
+
     <ul id="taskList"></ul>
-    <input type="text" id="newTaskInput" placeholder="Новая задача">
-    <button onclick="addTask()">Добавить</button>
+
+    <button id="clearBtn" onclick="clearTasks()">Очистить задачи</button>
   </div>
 
   <script src="script.js"></script>
