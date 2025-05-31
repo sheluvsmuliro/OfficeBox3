@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OfficeBox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="welcome-screen">
+    <h1>Добро пожаловать в OfficeBox</h1>
+    <p>Ваш личный ассистент по задачам и команде.</p>
+    <button onclick="showTaskBoard()">Перейти к задачам</button>
+  </div>
+
+  <div class="task-board" style="display: none;">
+    <h2>Мои задачи</h2>
+    <ul id="taskList"></ul>
+    <input type="text" id="newTaskInput" placeholder="Новая задача">
+    <button onclick="addTask()">Добавить</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
